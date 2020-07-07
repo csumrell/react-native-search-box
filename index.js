@@ -83,7 +83,7 @@ class Search extends PureComponent {
   // Required to support both react-native =>0.62 and <0.62
   getInputRef() {
     const { input_keyword } = this.refs
-    if Platform.OS === "web" return _component;
+    if (Platform.OS === "web") return _component;
     return !!input_keyword._component
       ? _component // <0.62
       : input_keyword // =>0.62
